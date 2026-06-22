@@ -1,5 +1,9 @@
 # quiet-search 🤫🔍
 
+<p align="center">
+  <img src="assets/demo.gif" alt="quiet-search demo — 打一句口令，全网检索报告自己出来" width="720">
+</p>
+
 > **一句话，全网检索；全程无头后台，绝不打扰你。**
 > 把 AI Agent（如 Claude Code）变成"全网搜查官"——小红书 / B站 / 推特 / Reddit / 知乎 / YouTube / 公众号 + **Kimi / 元宝 / DeepSeek / 秘塔** 四个中文强模型，一句口令搞定，且**绝不碰你的日常浏览器**。
 
