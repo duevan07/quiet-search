@@ -1,0 +1,32 @@
+# === 绝不提交：密钥与本地配置 ===
+.env
+*.env
+.env.local
+
+# === 绝不提交：浏览器登录态 / profile（含 cookie）===
+*_profile/
+.autocli-chrome/
+.kimi_profile/
+.yuanbao_profile/
+.chatgpt*/
+profile/
+opencli-ext/
+*.sqlite
+cookies*
+Local Storage/
+Cookies*
+
+# === python ===
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# === 产物 / 临时 ===
+reports/
+*.log
+out/
+tmp/
+
+# === macOS ===
+.DS_Store
