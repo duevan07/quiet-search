@@ -14,6 +14,7 @@
 - `engines/` — AI/平台引擎封装：`yb.py`(元宝，含 camoufox 兜底) · `cam_fetch.py`(camoufox 无头读 URL 正文) · `kimi.py`/`kimi_login.py`(Kimi) · `xhs.py`(小红书/TikHub)
 - `browser/launch.sh` — 专用无头浏览器(Chrome for Testing)启动模板
 - `tools/heimao_cli.py` — 自建公开 API CLI 示范（黑猫投诉）
+- `tools/super_search.py` — 路由式搜索聚合器：URL→Jina(失败切 camoufox) · GitHub→`gh`(长 query 自动回退更短前缀) · 网页→Exa · 中文→RedFox · 社媒→TikHub。依赖 `gh` CLI 与 `mcporter`(Exa)，用 `--dry-run` 先看路由再实跑
 - `commands/search-commands.md` — `ss/ssc/ssf` 口令（粘进你 AI 的常驻记忆）
 - `.env.example` — 凭证模板（复制成 `.env`，已被 `.gitignore` 忽略）
 
