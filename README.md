@@ -11,11 +11,13 @@
 
 ## 📦 仓库结构
 - `README.md` — 完整搭建说明书（下方全文，给 AI 读）
-- `engines/` — AI/平台引擎封装：`yb.py`(元宝) · `kimi.py`/`kimi_login.py`(Kimi) · `xhs.py`(小红书/TikHub)
+- `engines/` — AI/平台引擎封装：`yb.py`(元宝，含 camoufox 兜底) · `cam_fetch.py`(camoufox 无头读 URL 正文) · `kimi.py`/`kimi_login.py`(Kimi) · `xhs.py`(小红书/TikHub)
 - `browser/launch.sh` — 专用无头浏览器(Chrome for Testing)启动模板
 - `tools/heimao_cli.py` — 自建公开 API CLI 示范（黑猫投诉）
 - `commands/search-commands.md` — `ss/ssc/ssf` 口令（粘进你 AI 的常驻记忆）
 - `.env.example` — 凭证模板（复制成 `.env`，已被 `.gitignore` 忽略）
+
+> **迭代（2026-06-27）：元宝读 URL 自带 camoufox 兜底。** C 档免费桥（元宝/Jina 等）有可靠性天花板——cookie 会过期、网页会改、会被限流。现 `yb.py` 在「prompt 含 URL 且元宝彻底失败」时自动切 `cam_fetch.py`（camoufox 无头读正文）兜底；搜索/提炼无法兜底，无 URL 时如实报错。心智：**元宝=会搜会想的脑子，camoufox=会看的眼睛，眼睛在脑子宕机时顶上读链接，但别拿眼睛当脑子的备胎。**
 
 ## 🚀 最快上手
 1. `cp .env.example .env`，填入你自己的 `TIKHUB_KEY` 等；
